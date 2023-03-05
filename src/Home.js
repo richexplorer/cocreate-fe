@@ -53,7 +53,7 @@ function Home() {
             });
             return;
         }
-        window.location.href = "https://discord.com/api/oauth2/authorize?client_id=1080238151404093510&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&response_type=code&scope=identify";
+        window.location.href = "https://discord.com/oauth2/authorize?client_id=1080238151404093510&redirect_uri=https%3A%2F%2Fmaster.d1os0zrv3odqp4.amplifyapp.com%2F&response_type=code&scope=identify";
     }
 
     async function connectMagic() {
