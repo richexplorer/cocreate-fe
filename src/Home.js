@@ -9,7 +9,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const magic = new Magic('pk_live_095404FAE3C119D7', { 
-    network: 'mainnet', // connect to Ethereum Testnet!
+    network: 'mainnet', 
 });
 
 function Home() {
