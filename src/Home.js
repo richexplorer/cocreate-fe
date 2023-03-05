@@ -80,17 +80,18 @@ function Home() {
         }
 
         const data = { 
-            "address" : address, 
-            "discordCode" : discordCode 
+            "address": address, 
+            "discordCode": discordCode ,
+            "entityId": "e-25b8394d-978d-4230-bc6f-acf33f7cd8eb"
         };
 
         console.log(data);
 
-        const response = await axios.post('https://localhost:8081/api/entities/e-25b8394d-978d-4230-bc6f-acf33f7cd8eb/users/connect-discord-and-wallet', data);
-        console.log(response);
-
-        if (response.success == true) {
+        const response = await axios.post('http://localhost:8081/api/entities/e-25b8394d-978d-4230-bc6f-acf33f7cd8eb/users/connect-discord-and-wallet', data);
+        if (response.data.success == true) {
             alert("Connection successfully made, please head back to discord.");
+        } else if (response.data.success == false) {
+            alert(response.data.error ? response.data.error : "Unable to make the connection");
         }
     }
 
